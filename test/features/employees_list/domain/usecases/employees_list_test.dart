@@ -29,9 +29,9 @@ void main(){
   });
 
   test(
-    'to check if list of employees is fetched from the repository', (){
+    'to check if list of employees is fetched from the repository', () async{
       when(() => mockEmployeesRepository.getEmployeesList()).thenAnswer((_) async => Right(employeesList));
-      final result = employeesListUseCase.execute();
+      final result = await employeesListUseCase.execute();
       expect(result, Right(employeesList));
       verify(() => mockEmployeesRepository.getEmployeesList()).called(1);
       verifyNoMoreInteractions(mockEmployeesRepository);
