@@ -49,6 +49,7 @@ dependencies:
 
 dev_dependencies:
   mocktail: ^1.0.4
+  sqflite_common_ffi: ^2.4.0+2
   flutter_test:
     sdk: flutter
 
