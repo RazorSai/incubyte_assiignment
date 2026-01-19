@@ -19,4 +19,14 @@ class GetEmployeesListModel extends EmployeeEntity {
     );
   }
 
+  Map<String, dynamic> toJson(){
+    return {
+      'id': id,
+      'employee_name': employeeName,
+      'employee_salary': employeeSalary,
+      'country': country,
+      'job_title': jobTitle,
+    };
+  }
+
 }

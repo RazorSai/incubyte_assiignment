@@ -33,7 +33,7 @@ void main(){
     });
 
     test('should return a json map containing the proper data', () async{
-      final result = tGetEmployeesListModel.toJson();
+      final result = tGetEmployeesListModel[0].toJson();
       final List<dynamic> jsonMap = json.decode(fixture('employees_list.json'));
       final listOfData = (jsonMap)[0];
       expect(result, listOfData);
