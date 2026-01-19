@@ -10,8 +10,20 @@ class EmployeesLocalDataSource implements GetEmployeesListSource{
 
   static const EMPLOYEES_TABLE = 'employees';
 
+  Future<void> createTableIfNotExists() async {
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS $EMPLOYEES_TABLE (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        employee_name TEXT,
+        employee_salary INTEGER,
+        country TEXT,
+        job_title TEXT
+      )
+    ''');
+  }
+
   @override
-  Future<List<GetEmployeesListModel>> getEmployeesListDataSource() {
+  Future<List<GetEmployeesListModel>> getEmployeesListDataSource() async{
     // TODO: implement getEmployeesListDataSource
     throw UnimplementedError();
   }
