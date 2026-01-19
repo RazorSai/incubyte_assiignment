@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:incubyte_assignment/features/employees_list/data/datasources/get_employees_list_source.dart';
+import 'package:incubyte_assignment/core/datasources/get_employees_list_source.dart';
 import 'package:incubyte_assignment/features/employees_list/data/models/employees_list_model.dart';
 import 'package:incubyte_assignment/features/employees_list/data/repositories/get_employees_repository_impl.dart';
 import 'package:mocktail/mocktail.dart';
