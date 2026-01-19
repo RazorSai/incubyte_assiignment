@@ -25,7 +25,8 @@ class EmployeesLocalDataSource implements GetEmployeesListSource{
   @override
   Future<List<GetEmployeesListModel>> getEmployeesListDataSource() async{
     // TODO: implement getEmployeesListDataSource
-    throw UnimplementedError();
+    final maps = await db.query(EMPLOYEES_TABLE);
+    return maps.map((m) => GetEmployeesListModel.fromJson(m)).toList();
   }
 
 }
