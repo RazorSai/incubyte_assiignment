@@ -8,7 +8,7 @@ class MockGetEmployeesListRepository extends Mock implements GetEmployeesListDat
 }
 
 void main(){
-  GetEmployeesRepositoryImpl getEmployeesRepositoryImpl;
+  late GetEmployeesRepositoryImpl getEmployeesRepositoryImpl;
   late MockGetEmployeesListRepository mockGetEmployeesListRepository;
 
   setUp((){
@@ -16,6 +16,12 @@ void main(){
     getEmployeesRepositoryImpl = GetEmployeesRepositoryImpl(
       localDataSource: mockGetEmployeesListRepository,
     );
+  });
+
+  group('getEmployeesList', (){
+    test('should fetch employees list from database', (){
+      getEmployeesRepositoryImpl.getEmployeesList();
+    });
   });
 
 }
