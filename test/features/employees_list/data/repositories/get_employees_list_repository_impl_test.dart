@@ -30,7 +30,7 @@ void main(){
     );
   });
 
-  group('getEmployeesList', (){
+  group('employee', (){
     test('should fetch employees list from database', () async{
       when(() => mockGetEmployeesListRepository.getEmployeesListDataSource()).thenAnswer((_) async => tGetEmployeesListModel);
       final result = await getEmployeesRepositoryImpl.getEmployeesList();

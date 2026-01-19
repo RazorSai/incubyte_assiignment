@@ -12,9 +12,9 @@ class InsertEmployeeDetailsUseCase extends UseCase<EmployeeEntity, Params>{
   InsertEmployeeDetailsUseCase({required this.repository});
 
   @override
-  Future<Either<Failure, EmployeeEntity>> call(Params params) {
+  Future<Either<Failure, EmployeeEntity>> call(Params params) async{
     // TODO: implement call
-    throw UnimplementedError();
+    return repository.insertEmployeeDetails(params.employeeEntity);
   }
 
 }
