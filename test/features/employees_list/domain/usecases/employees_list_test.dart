@@ -37,7 +37,6 @@ void main(){
       expect(result, Right(employeesList));
       verify(() => mockEmployeesRepository.getEmployeesList()).called(1);
       verifyNoMoreInteractions(mockEmployeesRepository);
-  }
-  );
+  });
 
 }
